@@ -1,7 +1,12 @@
 <form> 
     <label for="search">${input.label}</label>
-    <input type="text" id="search" placeholder=input.placeholderText autofucus=true>
+    <input type="text" id="search" 
+        on-input(() => alert("input changed"))
+        placeholder=input.placeholderText 
+        autofocus 
+    >
 </form>
+
 
 <!--
 TODO 
@@ -10,6 +15,9 @@ promise that runs giphy api query
 on success, display giphs
 on error, display error message
 -->
+
+
+
 
 style {
     form {

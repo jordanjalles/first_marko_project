@@ -1,6 +1,12 @@
 <app-layout title="Jordan's first marko project">
     <main>
-      <searchfield label="GIF search" placeholderText="Search for GIFs"/>
-      <searchresults/>
+      <button onclick(() => alert('click'))>button</button>
+      <searchField label="GIF search" placeholderText="Search for GIFs" callback=searchCallback/>
+      <searchResults/>
+      
     </main>
 </app-layout>
+
+$ function searchCallback(query) {
+  alert(query);
+}
