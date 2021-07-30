@@ -1,12 +1,14 @@
+static function searchCallback(query) {
+  alert(query);
+  //return fetch('https://api.giphy.com/v1/gifs/search?q=' + query + '&api_key=9wMoLcLkC5BVJMPHB2Y7VU353dUMBxv5');
+}
+
 <app-layout title="Jordan's first marko project">
     <main>
-      <button onclick(() => alert('click'))>button</button>
-      <searchField label="GIF search" placeholderText="Search for GIFs" callback=searchCallback/>
+      <button on-click(() => alert('click'))>button</button>
+      <searchField label="GIF search" placeholderText="Search for GIFs" on-change=searchCallback/>
       <searchResults/>
-      
     </main>
 </app-layout>
 
-$ function searchCallback(query) {
-  alert(query);
-}
+

@@ -1,3 +1,11 @@
+class {
+    onMount(){
+        window.addEventListener("click", (event) => {
+            //apparently we need this to get events to fire *shrug*
+        })
+    }
+}
+
 <form> 
     <label for="search">${input.label}</label>
     <input type="text" id="search" 
