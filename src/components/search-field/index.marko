@@ -1,0 +1,22 @@
+class {
+    onCreate() {
+        this.state = { 
+            term: null
+        };
+    }
+
+    handleChange(event) {
+        event.preventDefault();
+        this.state.term = event.target.value;
+        console.log(this.state.term);
+    }
+}
+
+<form> 
+    <label for="search">${input.label}</label>
+    <input type="text" id="search" 
+        on-input('handleChange') 
+        placeholder=input.placeholderText 
+        autofocus 
+    >
+</form>

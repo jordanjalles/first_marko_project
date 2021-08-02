@@ -1,13 +1,17 @@
-static function searchCallback(query) {
-  alert(query);
+static function searchGif(query) {
+  console.log(query);
   //return fetch('https://api.giphy.com/v1/gifs/search?q=' + query + '&api_key=9wMoLcLkC5BVJMPHB2Y7VU353dUMBxv5');
 }
 
+////// Things I need help with //////
+//class in index blocks searchField css - use folder structure
+
+
 <app-layout title="Jordan's first marko project">
     <main>
-      <button on-click(() => alert('click'))>button</button>
-      <searchField label="GIF search" placeholderText="Search for GIFs" on-change=searchCallback/>
-      <searchResults/>
+      <button on-click(() => alert('click'))>test button</button>
+      <search-field label="GIF search" placeholderText="Search for GIFs" myAttribute=searchGif/>
+      <search-results/>
     </main>
 </app-layout>
 
