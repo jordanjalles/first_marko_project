@@ -7,7 +7,9 @@
   },
   "devDependencies": {
     "@marko/build": "^4",
-    "@marko/serve": "^4"
+    "@marko/serve": "^4",
+    "less": "^4.1.1",
+    "less-loader": "^9.0.0"
   },
   "private": true,
   "scripts": {
