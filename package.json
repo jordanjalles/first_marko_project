@@ -3,13 +3,13 @@
   "description": "The default Marko starter app",
   "version": "1.0.0",
   "dependencies": {
-    "marko": "^5"
+    "marko": "^5",
+    "less": "^4.1.1",
+    "less-loader": "^9.0.0"
   },
   "devDependencies": {
     "@marko/build": "^4",
-    "@marko/serve": "^4",
-    "less": "^4.1.1",
-    "less-loader": "^9.0.0"
+    "@marko/serve": "^4"
   },
   "private": true,
   "scripts": {
