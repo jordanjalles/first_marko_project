@@ -1,0 +1,58 @@
+import { getGifs } from 'Api'
+
+class {
+
+  /**
+   * ON Create we establish our state (vars to track)
+   */
+  onCreate() {
+    this.state = {
+      items: [], // our search return array
+      isFetching: false, // to manage when to show a loader while results are pending
+    }
+  }
+
+  async onInput(input) {
+
+    // Set isFetching to True while we start our request, to show a loader or whatever
+    this.state.isFetching = true;
+
+    // if we have a search term
+    if (input.term && input.term.length) {
+
+      // Pass term to our getGifs api helper,
+      // limit to 25 results
+      const gifs = await getGifs(input.term, 25)
+      console.log('Gifs Response', gifs)
+
+      // If we have a response object
+      if (gifs.length) {
+
+        // set items array to our gifs response (which is an array of objects)
+        this.state.items = gifs;
+
+        // Set isFetching to false cause we have a response
+        this.state.isFetching = false;
+      }
+    }
+  }
+}
+
+<section.results>
+  <div.grid>
+  <if(state.isFetching)>
+    Insert a snazzy loader...
+  </if>
+  <else>
+    <div.results__items>
+      <for|item, index| of=state.items>
+        <card
+          imageUrl=item.images.fixed_height.webp
+          title=item.title
+          url=item.url
+        />
+      </for>
+    </div>
+  </else>
+</div>
+</section>

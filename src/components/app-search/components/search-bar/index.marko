@@ -1,0 +1,37 @@
+class {
+  /**
+   * Set state on Input, pass in our default search term from app-search/index
+   */
+  onInput(input) {
+    this.state = {
+      term: input.defaultSearchTerm
+    }
+  }
+
+  /**
+   * Set Search Term
+   * We're using an event emitter to emit our "Search" event's value (the input term)
+   * This can be listened to in a child component via on-EMITTED_EVENT_NAME
+   * For, this is will be "on-search"
+   */
+  setTerm(e) {
+    this.state.term = e.target.value;
+    console.log('set term', this.state.term)
+    setTimeout(() => this.emit("search", e.target.value), 400)
+  }
+}
+
+
+
+<section.search-bar>
+  <div.grid>
+    <form>
+      <label for="search">${input.label}</label>
+      <input.search-bar__input
+        on-input('setTerm')
+        placeholder=state.term
+        value=state.term
+      />
+    </form>
+  </div>
+</section>

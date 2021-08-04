@@ -1,0 +1,65 @@
+//----------------------------------------------
+// Set all to border-box
+//----------------------------------------------
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+//----------------------------------------------
+// reset margins and paddings
+//----------------------------------------------
+* {
+  margin: 0;
+  padding: 0;
+}
+
+//----------------------------------------------
+// Prevent Mobile Overflow
+//----------------------------------------------
+html {
+  font-family: @font-sans;
+  scroll-behavior: smooth;
+  @media (max-width: @mq-md) {
+    overflow-x: hidden;
+  }
+}
+
+//----------------------------------------------
+// Smooth our type
+//----------------------------------------------
+body {
+  margin: 0;
+  width: 100%;
+  font-weight: 400;
+  font-style: normal;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-family: @font-sans;
+  font-size: @font-size-sm;
+}
+
+//----------------------------------------------
+// RWD Images
+//----------------------------------------------
+img {
+  max-width: 100%;
+}
+
+//----------------------------------------------
+// reset margins and paddings
+//----------------------------------------------
+
+figure,
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+fieldset {
+  border: 0;
+}

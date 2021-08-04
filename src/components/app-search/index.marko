@@ -1,0 +1,29 @@
+class {
+  onCreate(){
+    this.state = { term:"geometric"};
+  }
+
+  /**
+   * Has Searched
+   * sets the search term to state and passes it down to results
+   *
+   * search-bar component is using an Event Emitter - this.emit("search")
+   * to emit the term from the input (the search term)
+   * That emitted event can be ref'd as "on-search" and passed up as a prop
+   * on-search('hasSearched') refs this hasSearched method
+   * so it can be passed down to our results component.
+   *
+   * @see https://markojs.com/docs/events/
+   * @see https://markojs.com/docs/events/#emitting-custom-events
+   * @see https://stackoverflow.com/questions/43092341/correct-way-to-emit-value-with-marko-js
+   */
+  hasSearched(term){
+    this.state.term = term;
+  }
+}
+
+<search-bar
+  defaultSearchTerm=state.term
+  on-search('hasSearched')
+/>
+<results term=state.term />

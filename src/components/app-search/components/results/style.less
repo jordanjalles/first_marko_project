@@ -1,0 +1,13 @@
+@import "Styles/_variables.less";
+
+.results {
+  padding: @pad 0;
+
+  &__items {
+    @media (min-width: @mq-md) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: @pad-sm;
+    }
+  }
+}
