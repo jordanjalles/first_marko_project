@@ -1,9 +1,5 @@
 <app-layout title="Jordan's first marko project">
-    <main>
-      <button on-click(() => alert('click'))>test button</button>
-      <search-field label="GIF search" placeholderText="Search for GIFs"/>
-      <search-results/>
-    </main>
+  <@pageContent>
+    <app-search/>
+  </@pageContent>
 </app-layout>
-
-

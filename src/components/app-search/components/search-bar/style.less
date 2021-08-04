@@ -1,0 +1,25 @@
+@import "Styles/_variables.less";
+
+.search-bar {
+  border-bottom: 1px solid @color-grey2;
+  // vars working?
+  label {
+    font-weight: bold;
+    font-family: @font-sans;
+    color: @color-grey6;
+  }
+
+  input:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 0, 255, 0.5);
+    background-color: #fff;
+  }
+  input {
+    padding: 16px;
+    margin: 16px;
+    background-color: #eee;
+    border: 0;
+    border-radius: 24px;
+    width: 20em;
+  }
+}
